@@ -1,0 +1,252 @@
+.food-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.food-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.food-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.food-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.food-info h4 {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+/* ⭐ Star Rating System */
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/* Review Text Area */
+.food-info textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  font-size: 1rem;
+  height: 100px;
+}
+
+/* Buttons Group */
+.buttons-group {
+  display: flex;
+  gap: 15px; /* 🌟 Adds gap between Submit and Customize buttons */
+  margin-top: 15px;
+}
+
+/* General Button Style inside Food Info */
+.food-info button {
+  padding: 12px 20px;
+  background-color: tomato;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.food-info button:hover {
+  background-color: #e5533d;
+}
+
+/* Modal Overlay and Modal Box */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.ingredients-list {
+  margin: 20px 0;
+}
+
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ingredient-item input {
+  display: none;
+}
+
+.ingredient-item .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.ingredient-item.selected .checkmark {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  transform: scale(1.2);
+}
+
+.ingredient-item.selected .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Custom Ingredient Input */
+.custom-ingredient-input {
+  margin-top: 15px;
+}
+
+.custom-ingredient-input input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Preparing Animation */
+.preparing-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid tomato;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Buttons inside Modal */
+.make-food-btn, .close-btn {
+  margin-top: 15px;
+  margin-right: 10px; /* 🔥 small gap between Make My Food and Close */
+  padding: 10px 20px;
+  background: tomato;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.make-food-btn:hover, .close-btn:hover {
+  background: #e5533d;
+}
+
+/* Customize Button */
+.customize-btn {
+  background-color: #ff6347;
+}
+
+.customize-btn:hover {
+  background-color: #e5533d;
+}
+
+.food-detail-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.success-message {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  background-color: tomato;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 1000;
+  animation: fadeInOut 3s forwards;
+}
+
+/* Animation for success message */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+
+
+
