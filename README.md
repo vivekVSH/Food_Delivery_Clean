@@ -1,5 +1,11 @@
 # Food_Delivery_Project
 
+You have create your account on the Stripe - and past API key in the .env file.
+
+Also you have to create an account on the mongodb Atlas - past their url on the db.js in config folder.
+
+Also install following library ----
+
 express: Handles routing, middleware, and server setup.
 
 mongoose: Connects to MongoDB and manages schemas/models for data like users, orders, and food items.
